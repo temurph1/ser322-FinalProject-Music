@@ -10,11 +10,13 @@ include 'connection.php';
 
 if(isset($_POST['submit'])){
     
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['firstname'];
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
     
-    $query = "INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES (NULL, '$username', '$password', '$email')";
+    $query = "INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `email`) VALUES (NULL, '$firstname', '$lastname', '$username', '$password', '$email')";
     mysqli_query($conn, $query);     
 }
 ?>
@@ -32,13 +34,17 @@ if(isset($_POST['submit'])){
   <h1> Register </h1> 
         
   <form action="signup.php" method="post">
-  Email:<br>
-  <input type="text" name="email"><br>
+  First Name:<br>
+  <input type="text" name="firstname"><br>
+  Last Name:<br>
+  <input type="text" name="lastname"><br>
   Username:<br>
   <input type="text" name="username"><br>
   Password:<br>
-  <input type="text" name="password">
-  <br>
+  <input type="text" name="password"><br>
+  Email:<br>
+  <input type="text" name="email"><br><br>
+
   <input type="submit" name = "submit" value="Submit">
 </form>
         
