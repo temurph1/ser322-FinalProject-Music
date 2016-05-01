@@ -8,7 +8,9 @@ and open the template in the editor.
 <?php
 session_start();
 
-echo $_SESSION['username'];
+include 'connection.php';
+
+
 
 ?>
 <html>
@@ -18,7 +20,18 @@ echo $_SESSION['username'];
     </head>
     <body>
         <?php
-        
+        echo "Welcome ", $_SESSION['username'] ;
+
+
+
+    $query = "SELECT * FROM songs";
+    $myQuery = mysqli_query($conn, $query);
+    $queryRow = mysqli_fetch_array($myQuery);
+    
+    echo "<br><br>",$queryRow["title"]," ", $queryRow["artist"]," ", $queryRow["length"];
         ?>
+        
+        <h1></h1>
+        
     </body>
 </html>
