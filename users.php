@@ -21,7 +21,8 @@
     <tr><td><?php echo $row["username"] ?> 
         </td><td> <?php echo $row["email"] ?> 
         <td><label>
-    <input type = "hidden" name = "songID" value = "<?php echo $row["id"] ?>" >
+    <input type = "hidden" name = "userID" value = "<?php echo $row["id"] ?>" >
+    <input type = "hidden" name = "username" value = "<?php echo $row["username"] ?>" >
     <input type= "submit" name = "submit" value="View Playlist" />
     </label>
     </td></tr>
