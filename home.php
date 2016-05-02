@@ -9,8 +9,8 @@ and open the template in the editor.
 session_start();
 
 include 'connection.php';
-
-
+$username = $_SESSION['username'];
+$id = $_SESSION['id'];
 
 ?>
 <html>
@@ -20,18 +20,51 @@ include 'connection.php';
     </head>
     <body>
         <?php
-        echo "Welcome ", $_SESSION['username'] ;
+        echo "<b>", $username, "'s Playlist </b>";
 
 
-
-    $query = "SELECT * FROM songs";
+    $query = "SELECT * FROM playlists WHERE userId = '$id' ";
     $myQuery = mysqli_query($conn, $query);
+    
     $queryRow = mysqli_fetch_array($myQuery);
     
-    echo "<br><br>",$queryRow["title"]," ", $queryRow["artist"]," ", $queryRow["length"];
+    ?>
+    <table id="table" border="2">
+      <tr>
+      <th>Title</th>
+      <th>Artist</th>
+    </tr>
+    <?php  
+    while($row = mysqli_fetch_array($myQuery)){
+      
+    ?>
+    <form action="removeSong.php" method="post">
+        <?php
+        $songID = $row["songId"];
+        $songQuery = "SELECT * FROM songs WHERE id = '$songID' ";
+        $mySongQuery = mysqli_query($conn, $songQuery);
+    
+        $querySongRow = mysqli_fetch_array($mySongQuery);
         ?>
+    <tr><td><?php echo $querySongRow["title"] ?> 
+        </td><td> <?php echo $querySongRow["artist"] ?> 
+        <td><label>
+    <input type="hidden" name ="songID" value="<?php echo $row["songId"] ?>" >
+    <input type= "submit" name = "submit" value="Remove" />
+    </label>
+    </td></tr>
+    </form>  
+       
+        <?php
+    }?>
+        <form action="songlist.php" method="post">
+            <input type="submit" value="Song List">
+        <input type="submit" value="Add Song">
+        </form>   
+    <form action="users.php" method="post">
+            <input type="submit" value="Find Users">
+        </form> 
         
-        <h1></h1>
         
     </body>
 </html>

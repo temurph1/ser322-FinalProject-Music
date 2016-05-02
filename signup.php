@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
         
   <h1> Register </h1> 
         
-  <form action="signup.php" method="post">
+  <form action="index.php" method="post">
   First Name:<br>
   <input type="text" name="firstname"><br>
   Last Name:<br>
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
   Email:<br>
   <input type="text" name="email"><br><br>
 
-  <input type="submit" name = "submit" value="Submit">
+  <input type="submit" value="Submit" action="index.php" method="post">
 </form>
         
     </body>

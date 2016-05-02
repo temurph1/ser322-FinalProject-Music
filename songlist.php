@@ -9,10 +9,19 @@ and open the template in the editor.
 session_start();
 
 include 'connection.php';
+include('simple_html_dom.php');
 $username = $_SESSION['username'];
 
 
 ?>
+
+<?php
+    function query() { 
+        echo "alert(\"The link was clicked\");";
+    } 
+?>
+
+
 
 <html>
     <head>
@@ -20,22 +29,46 @@ $username = $_SESSION['username'];
         <title></title>
     </head>
     <body>
-        
+
         <h1> Song List </h1>
-        
-        <table border="2">
+
+        <table id="table" border="2">
       <tr>
       <th>Title</th>
       <th>Artist</th>
     </tr>
+   
         
-        <?php
+      <?php
     $query = "SELECT * FROM songs ";
     $myQuery = mysqli_query($conn, $query);
+    
+    
+
+    while($row = mysqli_fetch_array($myQuery)){
+     ?>   
+    
+    <form action="songlistProcess.php" method="post">
         
-        while($row = mysqli_fetch_array($myQuery)){
-        echo "<tr><td>",$row["title"],"</td><td>", $row["artist"], "</td><td> <input type=\"submit\" value=\"Add\"> </td></tr>";
-        }
-        ?>
+    <tr><td><?php echo $row["title"] ?> 
+        </td><td> <?php echo $row["artist"] ?> 
+        <td><label>
+    <input type = "hidden" name = "songID" value = "<?php echo $row["id"] ?>" >
+    <input type= "submit" name = "submit" value="Add" />
+    </label>
+    </td></tr>
+    </form>   
+    
+    
+    <?php
+    }
+    ?>
+
+
+
+
+     
+        
+    </form>
     </body>
 </html>
