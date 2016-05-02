@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2016 at 10:24 AM
+-- Generation Time: May 03, 2016 at 01:31 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.34
 
@@ -27,9 +27,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `playlists` (
-  `id` int(10) NOT NULL,
-  `username` varchar(25) NOT NULL
+  `userId` int(11) NOT NULL,
+  `songId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `playlists`
+--
+
+INSERT INTO `playlists` (`userId`, `songId`) VALUES
+(11, 2),
+(11, 3),
+(11, 4),
+(15, 2),
+(15, 3),
+(15, 4),
+(15, 6);
 
 -- --------------------------------------------------------
 
@@ -87,7 +100,8 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 (9, '', '', 'c', 'd', 'e'),
 (11, '', '', 'test', 'test', 'test'),
 (13, 'asdf', 'asdf', 'fdfdf', 'dfdf', 'dfdf'),
-(14, 'asdf', 'asdf', 'asd', 'fdf', 'dfd');
+(14, 'asdf', 'asdf', 'asd', 'fdf', 'dfd'),
+(15, 'Tommy', 'Murphy', 'tommy', 'tommy', 'tommy');
 
 --
 -- Indexes for dumped tables
@@ -97,7 +111,7 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 -- Indexes for table `playlists`
 --
 ALTER TABLE `playlists`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`userId`,`songId`);
 
 --
 -- Indexes for table `songs`
@@ -126,7 +140,7 @@ ALTER TABLE `songs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
