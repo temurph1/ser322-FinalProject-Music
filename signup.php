@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Signup</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -92,7 +92,7 @@ if(isset($_POST['submit'])){
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                  <h1 style="color: silver">Start a new music adventure</h1><br>
+                  <h1 style="color: silver">This is the best decision you've made all week ... probably</h1><br>
                   
                 <input type="submit"value="REGISTER WITH FACEBOOK" class="btn btn-lg btn-primary" style="width:500px; font-size:12px ">
                 <h2 style="font-size:12px; margin:8px; color: silver;">-   or  -</h2>
