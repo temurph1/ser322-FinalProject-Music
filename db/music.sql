@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2016 at 01:31 AM
+-- Generation Time: May 03, 2016 at 09:58 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.34
 
@@ -26,21 +26,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `playlists`
 --
 
-
-CREATE TABLE `merchandise`(
-	`id` int(25) NOT NULL,
-	`name`	varchar(25) NOT NULL,
-	`invintory` int(25) NOT NULL,
-	`price`     int(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-INSERT INTO `merchandise` (`id`, `name`, `invintory`, `price`) VALUES
-(1, 'Groovy T-Shirt', 20, 10),
-(2, 'Groovy Mug', 12,8);
-
-
-
-
 CREATE TABLE `playlists` (
   `userId` int(11) NOT NULL,
   `songId` int(11) NOT NULL
@@ -55,9 +40,20 @@ INSERT INTO `playlists` (`userId`, `songId`) VALUES
 (11, 3),
 (11, 4),
 (15, 2),
-(15, 3),
-(15, 4),
-(15, 6);
+(15, 9),
+(15, 11),
+(15, 14),
+(18, 4),
+(18, 5),
+(18, 8),
+(18, 11),
+(18, 12),
+(18, 14),
+(18, 15),
+(19, 2),
+(19, 3),
+(19, 11),
+(19, 13);
 
 -- --------------------------------------------------------
 
@@ -112,21 +108,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `email`) VALUES
-(9, '', '', 'c', 'd', 'e'),
-(11, '', '', 'test', 'test', 'test'),
-(13, 'asdf', 'asdf', 'fdfdf', 'dfdf', 'dfdf'),
-(14, 'asdf', 'asdf', 'asd', 'fdf', 'dfd'),
-(15, 'Tommy', 'Murphy', 'tommy', 'tommy', 'tommy');
+(15, 'Tommy', 'Murphy', 'tommymurphy', 'tommy', 'tommy@gmail.com'),
+(16, 'John', 'Smith', 'johnsmith', 'pw', 'johnsmith@gmail.com'),
+(17, 'Bob', 'Smith', 'bobsmith', 'pw', 'bobsmith@yahoo.com'),
+(18, 'John', 'Johnson', 'johnjohnson', 'pw', 'johnjohnson@gmail.com'),
+(19, 'Steve', 'Smith', 'steve1234', 'pw', 'steve@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
-
-
-ALTER TABLE `merchandise`
-	ADD PRIMARY KEY (`id`);
-
-
 
 --
 -- Indexes for table `playlists`
@@ -161,7 +151,7 @@ ALTER TABLE `songs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
