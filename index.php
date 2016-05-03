@@ -9,6 +9,17 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+		<style>
+		body {
+			background-color: #d0e4fe;
+		}
+
+		h1 {
+			color: orange;
+			text-align: center;
+		}
+
+		</style>
     </head>
     <body>
         <?php
