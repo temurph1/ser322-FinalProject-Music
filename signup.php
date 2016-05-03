@@ -48,7 +48,9 @@ if(isset($_POST['submit'])){
 
   <input type="submit" name="submit" value="Submit">
 </form>
-        
+       <form action="home.php" method="post">
+            <input type="submit" name = "submit" value="home">
+        </form> 
     </body>
     
 </html>
