@@ -72,12 +72,6 @@ $username = $_SESSION['username'];
                         <a href="home.php">Home</a>
                     </li>
                     <li>
-                        <a href="login.php">Login</a>
-                    </li>
-                    <li>
-                        <a href="signup.php">Register</a>
-                    </li>
-                    <li>
                         <a href="songlist.php">Library</a>
                     </li>
                     <li>
