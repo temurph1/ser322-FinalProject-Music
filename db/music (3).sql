@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2016 at 09:58 AM
+-- Generation Time: May 03, 2016 at 10:38 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.34
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `music`
 --
+CREATE DATABASE IF NOT EXISTS `music` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `music`;
 
 -- --------------------------------------------------------
 
