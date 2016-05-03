@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     $firstname = $queryRow['firstname'];
     $lastname = $queryRow['lastname'];
     
-    if($password == $pass){
+    if($password == $pass && $username != "" && $password != "" ){
        $_SESSION['username'] = $username;
        $_SESSION['id'] = $id;
        $_SESSION['email'] = $email;
