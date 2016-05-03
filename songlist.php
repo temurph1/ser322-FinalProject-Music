@@ -78,8 +78,22 @@ $username = $_SESSION['username'];
                         <a href="signup.php">Register</a>
                     </li>
                     <li>
+                        <a href="songlist.php">Library</a>
+                    </li>
+                    <li>
                         <a href="home.php">Playlist</a>
                     </li>
+                    <li>
+                        <a href="users.php">Find Users</a>
+                    </li>
+                    <li>
+                        <a href="editUser.php">Profile</a>
+                    </li>
+
+                    <a href="index.php">
+                    <button type="button" class="btn btn-warning" style="margin-left:400px; margin-top:7px;">Logout</button>
+                    </a>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

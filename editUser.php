@@ -45,7 +45,7 @@
         header("Location: home.php");
     }
     
-    if(isset($_POST['submit'])){
+
         ?>
         <h1> Edit Info </h1>    
     <form action="editUser.php" method="post">
@@ -63,7 +63,7 @@
     <input type="submit" name="update" value="Change">
     </form>
         <?php
-    }
+   
     ?>
 
         <form action="home.php" method="post">
