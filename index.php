@@ -51,13 +51,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
-                        <a href="#">Register</a>
+                        <a href="signup.php">Register</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +74,8 @@
                 <h1>Welcome to a new world of music</h1>
                 <p class="lead">Click the button below to get started</p>
                 <form action="signup.php">
-                    <a href="signup.php" button type="button" class="btn btn-lg btn-success">Register</button></a>
+                    <a href="signup.php" button type="button" class="btn btn-lg btn-success">Register</button></a><br>
+                    <a href="login.php" button type="button" class="btn btn-link">Existing user? Click here.</button></a>
                 </form>
             </div>
         </div>
