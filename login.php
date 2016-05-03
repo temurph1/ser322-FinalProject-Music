@@ -83,7 +83,7 @@
                 <h2 style="font-size:12px; margin:8px; color: silver;">-   or  -</h2>
                 <form action="loginprocess.php" method="post">
                 <input type="text" name="username" placeholder="   Username" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
-                <input type="text" name="password" placeholder="   Password "style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><p></p>
+                <input type="password" name="password" placeholder="   Password "style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><p></p>
                 <input type="submit" name = "submit" value="LOG IN" class="btn btn-lg btn-success" style="width:500px; font-size:12px ">
                 </form>
 
