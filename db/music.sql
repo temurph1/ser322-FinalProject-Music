@@ -26,6 +26,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `playlists`
 --
 
+
+CREATE TABLE `merchandise`(
+	`id` int(25) NOT NULL,
+	`name`	varchar(25) NOT NULL,
+	`invintory` int(25) NOT NULL,
+	`price`     int(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `merchandise` (`id`, `name`, `invintory`, `price`) VALUES
+(1, 'Groovy T-Shirt', 20, 10),
+(2, 'Groovy Mug', 12,8);
+
+
+
+
 CREATE TABLE `playlists` (
   `userId` int(11) NOT NULL,
   `songId` int(11) NOT NULL
@@ -106,6 +121,12 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 --
 -- Indexes for dumped tables
 --
+
+
+ALTER TABLE `merchandise`
+	ADD PRIMARY KEY (`id`);
+
+
 
 --
 -- Indexes for table `playlists`
