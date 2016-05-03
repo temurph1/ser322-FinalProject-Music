@@ -64,6 +64,10 @@ $id = $_SESSION['id'];
     <form action="users.php" method="post">
             <input type="submit" value="Find Users">
         </form> 
+    <form action="editUser.php" method="post">
+            <input type="submit" name = "submit" value="Edit Profile">
+        </form> 
+        
         
         
     </body>

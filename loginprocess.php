@@ -14,11 +14,17 @@ if(isset($_POST['submit'])){
     $queryRow = mysqli_fetch_array($myQuery);
     $pass = $queryRow['password'];
     $id = $queryRow['id'];
+    $email = $queryRow['email'];
+    $firstname = $queryRow['firstname'];
+    $lastname = $queryRow['lastname'];
     
     if($password == $pass){
-       echo "yes";
        $_SESSION['username'] = $username;
        $_SESSION['id'] = $id;
+       $_SESSION['email'] = $email;
+       $_SESSION['password'] = $pass;
+       $_SESSION['firstname'] = $firstname;
+       $_SESSION['lastname'] = $lastname; 
        header('Location: home.php');
     } else {
         echo "Invalid credentials";
