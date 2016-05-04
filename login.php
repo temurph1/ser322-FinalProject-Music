@@ -2,105 +2,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Login</title>
+        <title>Login</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    br {
-        line-height:30px;
-    }
-    </style>
+        <!-- Custom CSS -->
+        <style>
+            body {
+                background-image:url("images/bggradient.jpg");
+                background-attachment: fixed;
+                padding-top: 70px;
+                /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+            }
+            br {
+                line-height:30px;
+            }
+            .panel-transparent {
+                background: none;
+            }
+            .panel-transparent .panel-heading{
+                background: rgba(122, 130, 136, 0.2)!important;
+            }
+            .panel-transparent .panel-body{
+                background: rgba(46, 51, 56, 0.2)!important;
+            }
+            h1{
+                font-size:60px; 
+                font-weight: bold;
+                color: white;
+            }
+        </style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="images/groovylogowhite.png" width="105"></a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/groovylogowhite.png" width="105"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="login.php">Login</a>
+                        </li>
+                        <li>
+                            <a href="signup.php">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="login.php">Login</a>
-                    </li>
-                    <li>
-                        <a href="signup.php">Register</a>
-                    </li>
-                </ul>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container" align="center">
+
+            <div class="panel panel-primary panel-transparent">
+                <div class="panel-heading" style="padding: 100px;">
+                        <h1>Log in to begin</h1><br>
+
+                        <input type="submit"value="LOG IN WITH FACEBOOK" class="btn btn-lg btn-primary" style="width:500px; font-size:12px ">
+                        <h2 style="font-size:12px; margin:8px; color: white;">-   or  -</h2>
+                        <form action="loginprocess.php" method="post">
+                            <input type="text" name="username" placeholder="   Username" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
+                            <input type="password" name="password" placeholder="   Password "style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><p></p>
+                            <input type="submit" name = "submit" value="LOG IN" class="btn btn-lg btn-success" style="width:500px; font-size:12px; background-color: #ffcc33; ">
+                        </form>
+                    </div>
+                </div>
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.row -->
+
         </div>
         <!-- /.container -->
-    </nav>
 
-    <!-- Page Content -->
-    <div class="container">
+        <!-- jQuery Version 1.11.1 -->
+        <script src="js/jquery.js"></script>
 
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-        
-        
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 style="color: silver">Log in to begin</h1><br>
-
-                <input type="submit"value="LOG IN WITH FACEBOOK" class="btn btn-lg btn-primary" style="width:500px; font-size:12px ">
-                <h2 style="font-size:12px; margin:8px; color: silver;">-   or  -</h2>
-                <form action="loginprocess.php" method="post">
-                <input type="text" name="username" placeholder="   Username" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
-                <input type="password" name="password" placeholder="   Password "style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><p></p>
-                <input type="submit" name = "submit" value="LOG IN" class="btn btn-lg btn-success" style="width:500px; font-size:12px ">
-                </form>
-
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
+    </body>
 
 </html>
 
