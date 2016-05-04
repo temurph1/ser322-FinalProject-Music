@@ -58,6 +58,10 @@ if(isset($_POST['submit'])){
                 font-weight: bold;
                 color: white;
             }
+            input{
+                color:black;
+            }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -111,10 +115,10 @@ if(isset($_POST['submit'])){
                   <h1>This is the best decision you've made all week (probably)</h1><br>
                   
                 <input type="submit"value="REGISTER WITH FACEBOOK" class="btn btn-lg btn-primary" style="width:500px; font-size:12px ">
-                <h2 style="font-size:12px; margin:8px; color: silver;">-   or  -</h2>
+                <h2 style="font-size:12px; margin:8px; color: white;">-   or  -</h2>
         
                   <form action="signup.php" method="post">
-  <input type="text" name="firstname" placeholder="   First Name" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
+  <input type="text" name="firstname" placeholder="   First Name" style="width:500px; height:40px; font-size:20px; border: 2px solid silver;"><br>
   <input type="text" name="lastname" placeholder="   Last Name" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
   <input type="text" name="username" placeholder="   Username" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
   <input type="text" name="password" placeholder="   Password" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
