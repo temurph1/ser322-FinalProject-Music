@@ -97,7 +97,7 @@
 
                 <div class="container" align="center">
             <div class="jumbotron" style="width: 100%; height:100%; padding: 100px; background-color: white">
-                <h1 class="panel-title" style="font-size:60px; font-weight: bold; margin:px">WHAT IS GROOVY?</h1>
+                <h1 class="panel-title" style="font-size:60px; font-weight: bold;">WHAT IS GROOVY?</h1>
                 <h1 class="panel-title" style="font-size:20px; font-weight: bold;">Do we even know? Probably not.</h1>
                 <h1 class="panel-title" style="font-size:10px; font-weight: bold;">ALRIGHT. It's a reeeaaalllly mediocre music listening thing. <br> Now here's some gibberish.</h1>
 

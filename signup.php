@@ -35,13 +35,29 @@ if(isset($_POST['submit'])){
 
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    br {
-        line-height:30px;
-    }
+            body {
+                background-image:url("images/bggradient.jpg");
+                background-attachment: fixed;
+                padding-top: 70px;
+                /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+            }
+            br {
+                line-height:30px;
+            }
+            .panel-transparent {
+                background: none;
+            }
+            .panel-transparent .panel-heading{
+                background: rgba(122, 130, 136, 0.2)!important;
+            }
+            .panel-transparent .panel-body{
+                background: rgba(46, 51, 56, 0.2)!important;
+            }
+            h1{
+                font-size:40px; 
+                font-weight: bold;
+                color: white;
+            }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -88,11 +104,11 @@ if(isset($_POST['submit'])){
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+        <div class="container" align="center">
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                  <h1 style="color: silver">This is the best decision you've made all week ... probably</h1><br>
+            <div class="panel panel-primary panel-transparent">
+                <div class="panel-heading" style="padding: 100px">
+                  <h1>This is the best decision you've made all week (probably)</h1><br>
                   
                 <input type="submit"value="REGISTER WITH FACEBOOK" class="btn btn-lg btn-primary" style="width:500px; font-size:12px ">
                 <h2 style="font-size:12px; margin:8px; color: silver;">-   or  -</h2>
