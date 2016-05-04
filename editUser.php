@@ -156,7 +156,7 @@
     <h3>EMAIL</h3>
     <input type="text" placeholder=<?php echo "$email" ?> name="email" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><br>
 
-    <input class="btn btn-success" type="submit" name="update" value="Submit Changes" style="width:500px; font-size:12px ">
+    <input class="btn btn-warning" type="submit" name="update" value="Submit Changes" style="width:500px; font-size:12px ">
     </form>
         <?php
    

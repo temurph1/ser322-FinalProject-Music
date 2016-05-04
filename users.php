@@ -113,7 +113,7 @@
         <td><label>
     <input type = "hidden" name = "userID" value = "<?php echo $row["id"] ?>" >
     <input type = "hidden" name = "username" value = "<?php echo $row["username"] ?>" >
-    <input type= "submit" class="btn btn-danger" name = "submit" value="View Playlist" />
+    <input type= "submit" class="btn btn-warning" name = "submit" value="View Playlist" />
     </label>
     </td></tr>
     </form>   

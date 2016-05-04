@@ -123,7 +123,7 @@ if(isset($_POST['submit'])){
   <input type="text" name="username" placeholder="   Username" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
   <input type="text" name="password" placeholder="   Password" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br>
   <input type="text" name="email" placeholder="   Email" style="width:500px; height:40px; font-size:20px; border: 2px solid silver; "><br><br>
-  <input type="submit" name = "submit" value="REGISTER" class="btn btn-lg btn-success" style="width:500px; font-size:12px ">
+  <input type="submit" name = "submit" value="REGISTER" class="btn btn-lg btn-success" style="width:500px; font-size:12px; background-color: #ffcc33; ">
 
 </form>
 

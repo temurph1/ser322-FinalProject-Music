@@ -117,6 +117,7 @@ $id = $_SESSION['id'];
       <table class="table table-striped" id="table" border="0" align="center">
       <thead>
       <tr>
+          <th></th>
       <th>Title</th>
       <th>Artist</th>
     </tr>
@@ -125,17 +126,21 @@ $id = $_SESSION['id'];
     while($row = mysqli_fetch_array($myQuery)){
       
     ?>
-    <form action="removeSong.php" method="post">
         <?php
         $songID = $row["songId"];
         $songQuery = "SELECT * FROM songs WHERE id = '$songID' ";
         $mySongQuery = mysqli_query($conn, $songQuery);
-    
         $querySongRow = mysqli_fetch_array($mySongQuery);
         ?>
-    <tr><td><?php echo $querySongRow["title"] ?> 
+    <tr>
+                                    <form action="http://youtube.com/watch?v=<?php echo $querySongRow["videoID"] ?> " method="post">
+                                <td><input class="btn btn-success" type= "submit" name = "play" value="&#9654;"/>
+                            </form>
+                            </td>
+        <td><?php echo $querySongRow["title"] ?> 
         </td><td> <?php echo $querySongRow["artist"] ?> 
         <td><label>
+                    <form action="removeSong.php" method="post">
     <input type="hidden" name ="songID" value="<?php echo $row["songId"] ?>" >
     <input class="btn btn-danger" type= "submit" name = "submit" value="Remove" />
     </label>
@@ -145,7 +150,7 @@ $id = $_SESSION['id'];
         <?php
     }?>
         <form action="songlist.php" method="post">
-            <br><input type="submit" value="ADD SONG"  class="btn btn-lg btn-success" style="width:500px; font-size:12px "><br><br>
+            <br><input type="submit" value="ADD SONG"  class="btn btn-warning" style="width:500px; font-size:12px; background-color: orange;"><br><br>
         </form>   
     
             </div>
