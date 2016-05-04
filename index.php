@@ -85,7 +85,7 @@
                     <h1 class="panel-title" style="font-size:60px; font-weight: bold;">Welcome to a new world of music</h1>
                     <p class="lead">Click the button below to get started</p>
                     <form action="signup.php">
-                        <a href="signup.php" button type="button" class="btn btn-lg btn-success" style="width:300px; font-size:15px; ">START LISTENING NOW</button></a><br>
+                        <a href="signup.php" button type="button" class="btn btn-lg btn-success" style="width:300px; font-size:15px; background-color: #ffcc33; ">START LISTENING NOW</button></a><br>
                         <a href="login.php" button type="button" class="btn btn-link">Existing user? Click here.</button></a>
                     </form>
                 </div>
