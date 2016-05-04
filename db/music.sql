@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2016 at 10:38 AM
+-- Generation Time: May 03, 2016 at 07:53 PM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 5.5.34
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `music` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `music`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `merchandise`
+--
+
+CREATE TABLE `merchandise` (
+  `id` int(25) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `inventory` int(25) NOT NULL,
+  `price` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `merchandise`
+--
+
+INSERT INTO `merchandise` (`id`, `name`, `inventory`, `price`) VALUES
+(1, 'T-Shirt', 458, 24.99),
+(2, 'Mug', 854, 11.99),
+(3, 'Dev team signed picture', 12, 4999.99);
 
 -- --------------------------------------------------------
 
@@ -121,6 +143,12 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 --
 
 --
+-- Indexes for table `merchandise`
+--
+ALTER TABLE `merchandise`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `playlists`
 --
 ALTER TABLE `playlists`
@@ -144,6 +172,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `merchandise`
+--
+ALTER TABLE `merchandise`
+  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `songs`
 --

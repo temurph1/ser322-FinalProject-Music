@@ -59,7 +59,10 @@
                         <a href="songlist.php">Library</a>
                     </li>
                     <li>
-                        <a href="home.php">Playlist</a>
+                        <a href="playlist.php">Playlist</a>
+                    </li>
+					<li>
+                        <a href="merch.php">Merchandise</a>
                     </li>
                     <li>
                         <a href="users.php">Find Users</a>
