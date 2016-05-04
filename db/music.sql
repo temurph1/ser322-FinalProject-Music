@@ -42,7 +42,7 @@ CREATE TABLE `merchandise` (
 INSERT INTO `merchandise` (`id`, `name`, `inventory`, `price`) VALUES
 (1, 'T-Shirt', 458, 24.99),
 (2, 'Mug', 854, 11.99),
-(3, 'Dev team signed picture', 12, 4999.99);
+(3, 'Dev-team-signed-picture', 12, 4999.99);
 
 -- --------------------------------------------------------
 

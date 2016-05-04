@@ -113,6 +113,8 @@
         <td><label>
     <input type = "hidden" name = "merchID" value = "<?php echo $row["id"] ?>" >
     <input type = "hidden" name = "name" value = "<?php echo $row["name"] ?>" >
+	<input type = "hidden" name = "price" value = "<?php echo $row["price"] ?>" >
+	<input type = "hidden" name = "inventory" value = "<?php echo $row["inventory"]?>" >
     <input type= "submit" class="btn btn-warning" name = "submit" value="View Item" />
     </label>
     </td></tr>

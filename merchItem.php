@@ -87,56 +87,25 @@
         </nav>
 
         <!-- Page Content -->
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-
-                    <?php
-                    include 'connection.php';
+        <div class="row featurette">
+			<?php
+				include 'connection.php';
                     if (isset($_POST['submit'])) {
                         $merchID = $_POST['merchID'];
                         $name = $_POST['name'];
-                        $songQuery = "SELECT * FROM playlists WHERE userId = '$userID'";
-                        $mySongQuery = mysqli_query($conn, $songQuery);
-
-                        $querySongRow = mysqli_fetch_array($mySongQuery);
-                        ?>
-                        <h1> <?php echo "$name" ?>'s Info </h1>
-                        <table class="table table-striped" id="table" border="0" align="center">
-                            <thead>
-                                <tr>
-                                    <th></th>    
-                                    <th>Title</th>
-                                    <th>Artist</th>
-                                </tr>
-                            </thead>
-                            <?php
-                            while ($querySongRow = mysqli_fetch_array($mySongQuery)) {
-                                $songID = $querySongRow['songId'];
-                                $query = "SELECT * FROM songs WHERE id = '$songID' ";
-                                $myQuery = mysqli_query($conn, $query);
-
-                                $row = mysqli_fetch_array($myQuery);
-                                ?>
-                                <tr>                            <form action="http://youtube.com/watch?v=<?php echo $row["videoID"] ?>" method="post">
-                                    <td><input class="btn btn-success" type= "submit" name = "play" value="&#9654;"/>
-                                </form>
-                            </td><td><?php echo $row["title"] ?> 
-                        </td><td> <?php echo $row["artist"] ?> 
-                            <label>
-                            </label>
-                        </td></tr>
-                        <?php
-                    }
-                }
+						$price = $_POST['price'];
                 ?>
-
-        </div>
-    </div>
-    <!-- /.row -->
-
-</div>
+			<div class="col-md-7 col-md-push-5">
+					
+				<h2 class="featurette-heading"><?php echo $name . "     " ?><span class="text-muted"><?php echo "$ " . $price?></span></h2>
+			</div>
+			<div class="col-md-5 col-md-pull-7">
+				<img class="featurette-image img-responsive center-block" src= <?php echo "images/" . $name . ".png"?>>
+			</div>
+			<?php
+			}
+			?>
+		</div>
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
