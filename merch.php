@@ -1,19 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-
-include 'connection.php';
-$username = $_SESSION['username'];
-$id = $_SESSION['id'];
-
-?>
-
-<?php
-    function query() { 
-        echo "alert(\"The link was clicked\");";
-    } 
-?>
-
 <html lang="en">
 
 <head>
@@ -24,7 +9,7 @@ $id = $_SESSION['id'];
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Merchandise</title>
+    <title>Users</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -88,9 +73,6 @@ $id = $_SESSION['id'];
                     <a href="index.php">
                     <button type="button" class="btn btn-warning" style="margin-left:400px; margin-top:7px; color: white;">Logout</button>
                     </a>
-
-
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -103,51 +85,44 @@ $id = $_SESSION['id'];
 
         <div class="row">
             <div class="col-lg-12 text-center">
-               
-                        <?php
-        echo "<h1 style=\"color: silver\">", $username, "'s Playlist </h1>";
+                
+<h1 style="color: silver">Merchandise List</h1>
 
 
-    $query = "SELECT * FROM playlists WHERE userId = '$id' ";
-    $myQuery = mysqli_query($conn, $query);
-    
-    $queryRow = mysqli_fetch_array($myQuery);
-    
-    ?>
       <table class="table table-striped" id="table" border="0" align="center">
       <thead>
       <tr>
-      <th>Title</th>
-      <th>Artist</th>
-    </tr>
-        </thead>
-    <?php  
-    while($row = mysqli_fetch_array($myQuery)){
+      <th>Name</th>
+      <th>Price</th>
+    </tr>     
+      </thead>
+
+ <?php
       
-    ?>
-    <form action="removeSong.php" method="post">
-        <?php
-        $songID = $row["songId"];
-        $songQuery = "SELECT * FROM songs WHERE id = '$songID' ";
-        $mySongQuery = mysqli_query($conn, $songQuery);
+      include 'connection.php';
+    $query = "SELECT * FROM merchandise ";
+    $myQuery = mysqli_query($conn, $query);
+   
+    while($row = mysqli_fetch_array($myQuery)){
+     ?>   
     
-        $querySongRow = mysqli_fetch_array($mySongQuery);
-        ?>
-    <tr><td><?php echo $querySongRow["title"] ?> 
-        </td><td> <?php echo $querySongRow["artist"] ?> 
+    <form action="merchItem.php" method="post">
+        
+    <tr><td><?php echo $row["name"] ?> 
+        </td><td> <?php echo "$ " . $row["price"] ?> 
         <td><label>
-    <input type="hidden" name ="songID" value="<?php echo $row["songId"] ?>" >
-    <input class="btn btn-danger" type= "submit" name = "submit" value="Remove" />
+    <input type = "hidden" name = "merchID" value = "<?php echo $row["id"] ?>" >
+    <input type = "hidden" name = "name" value = "<?php echo $row["name"] ?>" >
+    <input type= "submit" class="btn btn-warning" name = "submit" value="View Item" />
     </label>
     </td></tr>
-    </form>  
-       
-        <?php
-    }?>
-        <form action="songlist.php" method="post">
-            <br><input type="submit" value="ADD SONG"  class="btn btn-lg btn-success" style="width:500px; font-size:12px "><br><br>
-        </form>   
+    </form>   
     
+    
+    <?php
+    }
+    ?>
+
             </div>
         </div>
         <!-- /.row -->
@@ -164,4 +139,3 @@ $id = $_SESSION['id'];
 </body>
 
 </html>
-
