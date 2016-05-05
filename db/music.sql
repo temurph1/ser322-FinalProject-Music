@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2016 at 05:10 AM
+-- Generation Time: May 05, 2016 at 05:28 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.34
 
@@ -42,7 +42,7 @@ CREATE TABLE `merchandise` (
 INSERT INTO `merchandise` (`id`, `name`, `inventory`, `price`) VALUES
 (1, 'T-Shirt', 458, 24.99),
 (2, 'Mug', 854, 11.99),
-(3, 'Dev team signed picture', 12, 4999.99);
+(3, 'Dev-team-signed-picture', 12, 4999.99);
 
 -- --------------------------------------------------------
 
@@ -148,6 +148,12 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `merchandise`
+--
+ALTER TABLE `merchandise`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `playlists`
