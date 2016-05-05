@@ -1,5 +1,5 @@
 
-- Download NetBeans (for development)
+- Download NetBeans (for development/use)
 - Download XAMPP
 
 1) Clone repository in NetBeans so you can edit the project (dev)
@@ -26,3 +26,6 @@ Log in / sign up with Facebook buttons do not work and are purely cosmetic
 
 SCRIPTS:
 Script file is located in the db folder (music.sql)
+
+DIAGRAM/REPORT:
+The diagram and report are located in the docs folder
