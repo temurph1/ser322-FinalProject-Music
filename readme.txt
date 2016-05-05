@@ -23,3 +23,6 @@ Login, Signup, Add Song to Playlist, View User Playlists, Play Song on YouTube, 
 KNOWN BUGS: 
 Adding songs to a playlist can be wonky - sometimes the first song does not add
 Log in / sign up with Facebook buttons do not work and are purely cosmetic
+
+SCRIPTS:
+Script file is located in the db folder (music.sql)
